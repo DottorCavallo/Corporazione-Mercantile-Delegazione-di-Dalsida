@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporazione Mercantile di Dalsida</title>
+    <style>
+        /* Stile generale fantasy */
+        body {
+            font-family: 'Cinzel', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+            color: #f5f5f5;
+            background-image: url('sfondo-fantasy.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        /* Header stile epico */
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #ffd700;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 3px solid #ffd700;
+        }
+
+        header h1 {
+            font-size: 5em;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px #000;
+              letter-spacing: 1px;
+        }
+
+header h2 {
+            font-size: 3em;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px #000;
+            margin-top: -70px;
+           letter-spacing: 3px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        letter-spacing: 10px;
+        }
+
+        /* Sezioni */
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid #ffd700;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+            color: #ddd;
+        }
+
+        /* Titolo */
+       @keyframes tremolare {
+    0% {
+        opacity: 1; /* Opacità piena */
+    }
+    25% {
+        opacity: 0.8; /* Leggermente trasparente */
+    }
+    50% {
+        opacity: 0.6; /* Torna a opacità piena */
+    }
+    75% {
+        opacity: 0.4; /* Leggermente trasparente */
+    }
+    100% {
+        opacity: 1; /* Torna a opacità piena */
+    }
+}
+
+h9 {
+    font-family: impact;
+    color: #111;
+    font-size: 3em;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    text-align: center;
+    background-color: #ffd700;
+    border: 2px solid #ffd700;
+    border-radius: 10px;
+    animation: tremolare 4.5s infinite; /* Applica l'animazione */
+ margin-left: 20px;
+letter-spacing: 3px;
+}
+
+     /* Box layout per le squadre */
+.team-container {
+    display: flex;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(34, 34, 34, 0.8); /* Colore di sfondo trasparente */
+    border: 2px solid #ffd700;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    position: relative; /* Necessario per posizionare l'immagine di sfondo */
+}
+
+/* Immagine di sfondo per il primo box */
+.team-container-1 {
+    background-image: url('https://img.freepik.com/premium-photo/historical-background-construction-site_931878-12943.jpg'); /* Sostituisci con il tuo link */
+    background-size: cover; /* Copre l'intera area del box */
+    background-position: center; /* Centra l'immagine */
+    background-repeat: no-repeat; /* Evita la ripetizione dell'immagine */
+}
+
+/* Immagine di sfondo per il secondo box */
+.team-container-2 {
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f920215a-6d5d-4923-88b9-da2c03af86ad/dbslg5m-22ff3e04-9736-4326-9119-c29a0e2143e3.png/v1/fill/w_500,h_250/fantasy_town__construction_site__by_gabrielegabba_dbslg5m-250t.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Nzk5IiwicGF0aCI6IlwvZlwvZjkyMDIxNWEtNmQ1ZC00OTIzLTg4YjktZGEyYzAzYWY4NmFkXC9kYnNsZzVtLTIyZmYzZTA0LTk3MzYtNDMyNi05MTE5LWMyOWEwZTIxNDNlMy5wbmciLCJ3aWR0aCI6Ijw9MTU5OCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.57XN36Ety9fN-HUZKqd7GHB75NuSGw41ePl_0WaL1cI'); /* Sostituisci con il tuo link */
+    background-size: cover; /* Copre l'intera area del box */
+    background-position: center; /* Centra l'immagine */
+    background-repeat: no-repeat; /* Evita la ripetizione dell'immagine */
+}
+
+/* Immagine di sfondo per il terzo box */
+.team-container-3 {
+    background-image: url('https://st.depositphotos.com/1756323/3807/i/450/depositphotos_38071401-stock-photo-construction-site-in-the-woods.jpg'); /* Sostituisci con il tuo link */
+    background-size: cover; /* Copre l'intera area del box */
+    background-position: center; /* Centra l'immagine */
+    background-repeat: no-repeat; /* Evita la ripetizione dell'immagine */
+}
+
+/* Box Squadra */
+.team-box {
+    width: 350px;
+    height: 350px;
+    color: #ffd700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #ffd700;
+    border-radius: 5px;
+    margin-right: 20px;
+    font-size: 1.4em;
+    text-shadow: 1px 1px 3px #000;
+}
+
+
+        /* Box trasparente per indicare la squadra */
+.team-box {
+    width: 350px;
+    height: 350px;
+    color: yellow;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0px solid #ffd700;
+    border-radius: 5px;
+    margin-right: 20px;
+    font-size: 5em;
+    text-shadow: 5px 5px 1px #000;
+    background-size: cover; /* Copre l'intera area del box */
+    background-position: center; /* Centra l'immagine */
+    background-repeat: no-repeat; /* Evita la ripetizione dell'immagine */
+}
+
+/* Immagine di sfondo per il primo box */
+.team-box-1 {
+    background-image: url('https://i.postimg.cc/yd280SR1/OIG4-q-Yx1-Kx-DCv3-Ys82t-removebg-preview.png'); /* Sostituisci con il tuo link */
+}
+
+/* Immagine di sfondo per il secondo box */
+.team-box-2 {
+    background-image: url('https://i.postimg.cc/XvzCDq5h/OIG1-removebg-preview-1.png'); /* Sostituisci con il tuo link */
+}
+
+/* Immagine di sfondo per il terzo box */
+.team-box-3 {
+    background-image: url('https://i.postimg.cc/XYvK2Thr/OIG1-1-removebg-preview.png'); /* Sostituisci con il tuo link */
+}
+
+        /* Descrizione della squadra */
+        .team-description {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .team-description p {
+           font-family: impact;
+          font-size: 1.2em;
+            color:black;
+background-color: #ffd700; border-radius: 5px;
+            margin: 0;
+            padding: 5px 0; text-align: center;
+            opacity:0.9;
+letter-spacing: 1px; border: 2px solid #ffd700;
+        }
+
+        /* Box per capomastro e mastri */
+        .info-box {
+            background-color: #333;
+            border: 2px solid #ffd700; 
+            border-radius: 5px;
+            padding: 10px; font-size: 1.2em;
+            margin-bottom: 10px; opacity:0.7;
+           letter-spacing: 3px;
+        }
+
+        .info-box a {
+            color: #ffd700;
+            text-decoration: none; 
+        }
+
+        .info-box a:hover { color: yellow;
+font-size: 2em; background-color: #222; border-radius: 100px; padding: 10px; border: 1px solid #ffd700;
+        }
+
+        /* Box per obiettivi in stile achievement */
+        .achievements {
+            background-color: #444;
+            border: 2px solid #ffd700;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            text-align: center;
+            font-size: 1.8em; opacity:0.7;
+           letter-spacing: 3px;
+        }
+
+        .achievements a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .achievements a:hover {
+            text-decoration: underline; background-color: #222;font-size: 1.1em; color: yellow;letter-spacing: 10px;
+        }
+
+        /* Sezione aggiuntiva: Archivio giocate */
+        .section {
+            margin: 20px 0;
+        }
+
+        .section h3 {
+            color: #ffd700;
+            font-size: 6em;
+            margin-bottom: -31px; text-align: center;
+        }
+
+        .section p {
+            font-family: impact;
+          font-size: 1.2em;
+            color:black;
+background-color: #ffd700; border-radius: 5px;
+            margin: 0;
+            padding: 5px 0; text-align: center;
+            opacity:1;
+letter-spacing: 1px; border: 2px solid #ffd700;
+        }
+
+        @keyframes lampeggiante {
+    0% {
+        opacity: 1; /* Opacità piena */
+    }
+    50% {
+        opacity: 0; /* Opacità zero (invisibile) */
+    }
+    100% {
+        opacity: 1; /* Torna a opacità piena */
+    }
+}
+
+.section a {
+  font-size: 1.7em;
+    color: #ffd700;
+    font-weight: bold;
+    text-decoration: none;
+    animation: lampeggiante 1s infinite; /* Applica l'animazione */
+}
+
+        .section a:hover {
+            text-decoration: underline;
+        }
+
+        /* Box per i lavori */
+        .work-section {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: rgba(34, 34, 34, 0.8);
+            border: 2px solid #ffd700;
+            border-radius: 10px;
+            text-align: center;background-image: url('https://cdna.artstation.com/p/assets/images/images/022/177/638/large/ariel-j-untitled.jpg?1574389607');background-size: cover; /* Copre l'intera area del box */
+    background-position: center; /* Centra l'immagine */
+    background-repeat: no-repeat; /* Evita la ripetizione dell'immagine */
+        }
+
+        .work-section h3 {
+           color: yellow;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0px solid #ffd700;
+    border-radius: 5px;
+    margin-right: 10px; margin-bottom: 10px;
+    font-size: 6em;
+    text-shadow: 5px 5px 1px #000; font-weight: 300; letter-spacing: 3px;
+        }
+        .work-info {
+            font-family: impact;
+          font-size: 1.3em;
+            color:white;
+opacity:0.9;
+letter-spacing: 2px; font-weight: 10;
+          text-shadow: 4px 4px 1px #000;
+        }
+
+        .work-box-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .work-box {
+            width: 30%;
+            padding: 20px;
+            background-color: #111;
+            color: #ffd700;
+            text-align: center;
+            border: 2px solid #ffd700;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .work-box:hover {
+            background-color: #222; font-size: 1.2em;
+letter-spacing: 2px;
+        }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+      <h1>Corporazione Mercantile </h1>
+        <h2> Delegazione di Dalsida </h2>
+        <p>Ricostruzione e ripristino della Città Perduta</p>
+    </header>
+
+    <main>
+        <h9>Squadre Operative</h9>
+
+<!-- Prima Squadra -->
+<div class="team-container team-container-1">
+    <!-- Box Squadra -->
+    <div class="team-box team-box-1">
+        Prima Squadra
+    </div>
+
+    <!-- Descrizione Squadra -->
+    <div class="team-description">
+        <p>Compagnia dedicata all'edilizia civile, con particolare attenzione alla costruzione di strutture e infrastrutture pubbliche.</p>
+
+        <!-- Capomastro e Mastri -->
+        <div class="info-box">
+            <strong>Capomastro:</strong> <a href="descrizione_kulaa.html">Kulaa</a>
+        </div>
+        <div class="info-box">
+            <strong>Mastri:</strong>
+            <ul>
+                <li>Mastro 1</li>
+                <li>Mastro 2</li>
+                <li>Mastro 3</li>
+                <li>Mastro 4</li>
+            </ul>
+        </div>
+
+        <!-- Obiettivi della Squadra -->
+        <div class="achievements">
+            <a href="obiettivi_prima_squadra.html">Obiettivi della Squadra</a>
+        </div>
+    </div>
+</div>
+
+<!-- Seconda Squadra -->
+<div class="team-container team-container-2">
+    <div class="team-box team-box-2">
+        Seconda Squadra
+    </div>
+
+    <div class="team-description">
+        <p>Compagnia specializzata nella costruzione di strutture difensive e opere di grandi dimensioni.</p>
+
+        <!-- Capomastro e Mastri -->
+        <div class="info-box">
+            <strong>Capomastro:</strong> <a href="descrizione_mastri.html">Minilk</a>
+        </div>
+        <div class="info-box">
+            <strong>Mastri:</strong>
+            <ul>
+                <li>Mastro A</li>
+                <li>Mastro B</li>
+              <li>Mastro C</li>
+                <li>Mastro D</li>
+            </ul>
+        </div>
+
+        <!-- Obiettivi della Squadra -->
+        <div class="achievements">
+            <a href="obiettivi_seconda_squadra.html">Obiettivi della Squadra</a>
+        </div>
+    </div>
+</div>
+
+<!-- Terza Squadra -->
+<div class="team-container team-container-3">
+    <div class="team-box team-box-3">
+        Terza Squadra
+    </div>
+
+    <div class="team-description">
+        <p>Compagnia incaricata di coordinare e valutare l’agibilità strutturale, garantire la messa in sicurezza e gestire l’organizzazione delle infrastrutture nel delicato confine tra civile e militare.</p>
+
+        <!-- Capomastro e Mastri -->
+        <div class="info-box">
+            <strong>Capomastro:</strong> <a href="descrizione_mastri.html">Maliina</a>
+        </div>
+        <div class="info-box">
+            <strong>Mastri:</strong>
+            <ul>
+                <li>Mastro X</li>
+                <li>Mastro Y</li>
+              <li>Mastro Z</li>
+                <li>Mastro §</li>
+            </ul>
+        </div>
+
+        <!-- Obiettivi della Squadra -->
+        <div class="achievements">
+            <a href="obiettivi_terza_squadra.html">Obiettivi della Squadra</a>
+        </div>
+    </div>
+</div>
+
+        <!-- Sezione Lavori -->
+        <div class="work-section">
+            <h3>Lavori</h3>
+            <p class="work-info">Sia noto a tutti che la Corporazione Mercantile, nella realizzazione di qualsiasi struttura, si occupa unicamente degli aspetti strutturali. L'oggettistica essenziale verrà fornita solamente ove se ne ravvisi il bisogno. Gli elementi decorativi e di abbellimento, invece, non rientrano nei servigi offerti dalla Corporazione e pertanto non saranno forniti.</p>
+            <div class="work-box-container">
+                <div class="work-box" onclick="window.location.href='lavori_eseguiti.html'">
+                    Lavori eseguiti
+                </div>
+                <div class="work-box" onclick="window.location.href='lavori_in_corso.html'">
+                    Lavori in corso
+                </div>
+                <div class="work-box" onclick="window.location.href='lavori_futuri.html'">
+                    Lavori Futuri
+                </div>
+            </div>
+        </div>
+
+        <!-- Sezione Giocate -->
+        <div class="section">
+            <h3>Archivio delle Giocate</h3>
+            <p>In questo archivio sono custodite le cronache di:<br> giocate solitarie, <br>segreti di mercanti, <br>lavori e scambi di opinioni tra mastri,<br> ma, anche semplici dibattiti tra membri della Corporazione Mercantile.<br> Tali azioni, di grande importanza per l'equilibrio dell'ON game,<br> sono state raccolte e preservate per la loro rilevanza.<br> Qui potrai trovare resoconti dettagliati di eventi che hanno segnato i momenti salienti della delegazione di Dalsida,<br> rivelato accordi segreti, <br>e dato forma a nuovi progetti o scoperte. <br>Questo prezioso spazio ti offre la possibilità di rivivere tali momenti, <br>di trarre saggezza dagli atti compiuti<br> e di comprendere il corso degli avvenimenti che hanno influito sull'ordine delle cose. <br><br>Buona lettura!</p>
+           
+            <a href="traguardi.html">Entra in archivio</a>
+        </div>
+    </main>
+</body>
+</html>
